@@ -134,3 +134,9 @@ Full reflection is in `ethics.html`.
 4. Log in to access the Study Task Manager  
 
 ---
+
+## License
+
+This project is licensed under the MIT License, which permits reuse, modification, and distribution for educational and personal purposes.
+
+---
