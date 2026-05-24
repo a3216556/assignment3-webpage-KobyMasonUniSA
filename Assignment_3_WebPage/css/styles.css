@@ -306,3 +306,37 @@ table th {
     opacity: 0;
     transition: opacity 0.4s ease;
 }
+/* Error image container */
+.error-image-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  margin: 25px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Error images */
+.error-img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.error-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+}
+
+/* Captions */
+.error-caption {
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 10px;
+}
