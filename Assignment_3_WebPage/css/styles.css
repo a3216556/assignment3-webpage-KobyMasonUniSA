@@ -63,3 +63,43 @@ body {
     width: 80%;
     border-radius: 10px;
 }
+/* Error Messages */
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+/* Task Form */
+.task-form input,
+.task-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.task-form button {
+    padding: 10px 15px;
+    margin-right: 10px;
+}
+
+/* Task Table */
+#taskTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#taskTable th, #taskTable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#taskTable th {
+    background: #eee;
+}
+
+/* Date & Time */
+.date-time {
+    margin-top: 20px;
+    font-style: italic;
+}
