@@ -18,29 +18,24 @@ This project demonstrates core web development skills including:
 ---
 
 ## Project Structure  
-Assignment_3_WebPage/
-│
-├── html/
-│   ├── index.html
-│   ├── tasks.html
-│   ├── blog.html
-│   └── ethics.html
-│
-├── css/
-│   └── styles.css
-│
-├── js/
-│   ├── main.js
-│   └── tasks.js
-│
-├── images/
-│   ├── study1.png
-│   ├── study2.png
-│   ├── study3.png
-│   ├── error1.png
-│   └── error2.png
-│
-└── README.md
+- **Assignment_3_WebPage/**
+  - **html/**
+    - index.html  
+    - tasks.html  
+    - blog.html  
+    - ethics.html  
+  - **css/**
+    - styles.css  
+  - **js/**
+    - main.js  
+    - tasks.js  
+  - **images/**
+    - study1.png  
+    - study2.png  
+    - study3.png  
+    - error1.png  
+    - error2.png  
+  - **README.md**
 
 ---
 
