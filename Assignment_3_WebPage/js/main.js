@@ -1,13 +1,23 @@
-// Simple image cycling script
+// Image cycling script
 const images = [
-    "../assets/study1.jpg",
-    "../assets/study2.jpg",
-    "../assets/study3.jpg"
+    "../images/study1.png",
+    "../images/study2.png",
+    "../images/study3.png"
 ];
 
-let currentIndex = 0;
+const studyImage = document.getElementById("studyImage");
+const changeImageBtn = document.getElementById("changeImageBtn");
 
-document.getElementById("changeImageBtn").addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    document.getElementById("studyImage").src = images[currentIndex];
+changeImageBtn.addEventListener("click", () => {
+    studyImage.classList.add("fade-out");
+
+    setTimeout(() => {
+        const currentIndex = images.indexOf(studyImage.getAttribute("src"));
+        const nextIndex = (currentIndex + 1) % images.length;
+        studyImage.setAttribute("src", images[nextIndex]);
+
+        studyImage.classList.remove("fade-out");
+    }, 400); 
 });
+
+
