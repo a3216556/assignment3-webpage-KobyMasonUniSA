@@ -1,43 +1,80 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
+/* ---------------------------
+   GLOBAL DARK THEME
+---------------------------- */
+
+:root {
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --text-light: #e6e6e6;
+    --text-muted: #b3b3b3;
+    --accent: #4cc9f0;        /* Neutral blue highlight */
+    --accent-hover: #3bb8e0;
+    --danger: #ff6b6b;
+    --success: #4caf50;
+    --border: #2a2a2a;
 }
 
-/* Navigation Bar */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-light);
+}
+
+/* ---------------------------
+   NAVIGATION BAR
+---------------------------- */
+
 .navbar {
-    background: #222;
-    color: white;
-    padding: 15px;
+    background: #000;
+    padding: 15px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--accent);
+    margin: 0;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 .nav-links a {
-    color: white;
+    color: var(--text-light);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    color: var(--accent);
 }
 
-/* Hero Section */
+/* ---------------------------
+   HERO SECTION
+---------------------------- */
+
 .hero {
     text-align: center;
-    padding: 40px;
-    background: #ddd;
+    padding: 50px 20px;
+    background: #181818;
+    border-bottom: 1px solid var(--border);
 }
 
-/* Image Section */
+.hero h2 {
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+/* ---------------------------
+   IMAGE SECTION
+---------------------------- */
+
 .image-section {
     text-align: center;
     margin: 30px 0;
@@ -45,44 +82,101 @@ body {
 
 .image-section img {
     width: 60%;
-    max-width: 600px;
-    border-radius: 10px;
+    max-width: 650px;
+    border-radius: 12px;
+    border: 2px solid var(--border);
 }
 
 #changeImageBtn {
     margin-top: 15px;
     padding: 10px 20px;
-    font-size: 16px;
+    background: var(--accent);
+    border: none;
+    border-radius: 6px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-/* Content Sections */
-.content-section {
-    background: white;
-    margin: 20px auto;
-    padding: 20px;
-    width: 80%;
-    border-radius: 10px;
+#changeImageBtn:hover {
+    background: var(--accent-hover);
 }
-/* Error Messages */
-.error-message {
-    color: red;
+
+/* ---------------------------
+   CONTENT SECTIONS
+---------------------------- */
+
+.content-section {
+    background: var(--bg-card);
+    margin: 25px auto;
+    padding: 25px;
+    width: 80%;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.content-section h2 {
+    color: var(--accent);
+}
+
+/* ---------------------------
+   FORMS
+---------------------------- */
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    background: #111;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
     font-weight: bold;
 }
 
-/* Task Form */
-.task-form input,
-.task-form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
+#addTaskBtn {
+    background: var(--accent);
+    color: #000;
 }
 
-.task-form button {
-    padding: 10px 15px;
-    margin-right: 10px;
+#addTaskBtn:hover {
+    background: var(--accent-hover);
 }
 
-/* Task Table */
+#updateTaskBtn {
+    background: var(--success);
+    color: #000;
+}
+
+#updateTaskBtn:hover {
+    background: #3e9e45;
+}
+
+/* ---------------------------
+   ERROR MESSAGES
+---------------------------- */
+
+.error-message {
+    color: var(--danger);
+    font-weight: bold;
+}
+
+/* ---------------------------
+   TASK TABLE
+---------------------------- */
+
 #taskTable {
     width: 100%;
     border-collapse: collapse;
@@ -90,16 +184,65 @@ body {
 }
 
 #taskTable th, #taskTable td {
-    border: 1px solid #ccc;
-    padding: 10px;
+    border: 1px solid var(--border);
+    padding: 12px;
+    text-align: left;
 }
 
 #taskTable th {
-    background: #eee;
+    background: #222;
+    color: var(--accent);
 }
 
-/* Date & Time */
+#taskTable tr:nth-child(even) {
+    background: #161616;
+}
+
+#taskTable tr:nth-child(odd) {
+    background: #1c1c1c;
+}
+
+#taskTable button {
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+#taskTable button:nth-child(1) {
+    background: var(--accent);
+    color: #000;
+}
+
+#taskTable button:nth-child(2) {
+    background: var(--danger);
+    color: #000;
+}
+
+/* ---------------------------
+   DATE & TIME
+---------------------------- */
+
 .date-time {
     margin-top: 20px;
     font-style: italic;
+    color: var(--text-muted);
+}
+
+/* ---------------------------
+   TABLES (BLOG PAGE)
+---------------------------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    border: 1px solid var(--border);
+    padding: 12px;
+}
+
+table th {
+    background: #222;
+    color: var(--accent);
 }
