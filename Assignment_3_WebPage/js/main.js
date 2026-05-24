@@ -6,18 +6,25 @@ const images = [
 ];
 
 const studyImage = document.getElementById("studyImage");
-const changeImageBtn = document.getElementById("changeImageBtn");
+const prevImageBtn = document.getElementById("prevImage");
+const nextImageBtn = document.getElementById("nextImage");
 
-changeImageBtn.addEventListener("click", () => {
+let currentIndex = 0;
+
+function showImage(newIndex) {
+    currentIndex = (newIndex + images.length) % images.length;
     studyImage.classList.add("fade-out");
 
     setTimeout(() => {
-        const currentIndex = images.indexOf(studyImage.getAttribute("src"));
-        const nextIndex = (currentIndex + 1) % images.length;
-        studyImage.setAttribute("src", images[nextIndex]);
-
+        studyImage.setAttribute("src", images[currentIndex]);
         studyImage.classList.remove("fade-out");
-    }, 400); 
+    }, 400);
+}
+
+nextImageBtn.addEventListener("click", () => {
+    showImage(currentIndex + 1);
 });
 
-
+prevImageBtn.addEventListener("click", () => {
+    showImage(currentIndex - 1);
+});
