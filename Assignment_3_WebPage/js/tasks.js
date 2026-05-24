@@ -179,3 +179,20 @@ window.onload = function() {
     }
 
 };
+// ---------------------------
+// LIVE DATE & TIME DISPLAY
+// ---------------------------
+function updateDateTime() {
+    const now = new Date();
+    const formatted = now.toLocaleString("en-AU", {
+        dateStyle: "full",
+        timeStyle: "medium"
+    });
+
+    document.getElementById("dateTime").textContent =
+        "Current Date & Time: " + formatted;
+}
+
+// Update every second
+setInterval(updateDateTime, 1000);
+updateDateTime();
