@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Blog & Troubleshooting</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1 class="logo">Project Blog</h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tasks.html">Study Tasks</a></li>
+            <li><a href="blog.html">Project Blog</a></li>
+            <li><a href="ethics.html">Ethics & Privacy</a></li>
+        </ul>
+    </nav>
+
+    <!-- Agile Plan -->
+    <section class="content-section">
+        <h2>Agile Project Plan (3-Week Sprint)</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Phase</th>
+                    <th>Week 1</th>
+                    <th>Week 2</th>
+                    <th>Week 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Planning</td>
+                    <td>Define scope, identify required pages, outline CRUD features.</td>
+                    <td>Refine requirements based on early testing.</td>
+                    <td>Review progress and adjust remaining tasks.</td>
+                </tr>
+                <tr>
+                    <td>Analysis</td>
+                    <td>Research study task apps, identify user needs.</td>
+                    <td>Analyse issues found during development.</td>
+                    <td>Final analysis of system behaviour.</td>
+                </tr>
+                <tr>
+                    <td>Design</td>
+                    <td>Create folder structure, plan UI layout.</td>
+                    <td>Implement dark theme and animations.</td>
+                    <td>Final UI polish and consistency checks.</td>
+                </tr>
+                <tr>
+                    <td>Implementation</td>
+                    <td>Build home page + navigation.</td>
+                    <td>Implement CRUD functionality.</td>
+                    <td>Complete blog + ethics pages.</td>
+                </tr>
+                <tr>
+                    <td>Testing & Maintenance</td>
+                    <td>Test login + basic layout.</td>
+                    <td>Debug CRUD issues.</td>
+                    <td>Final testing and validation.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Troubleshooting Log -->
+    <section class="content-section">
+        <h2>Troubleshooting Log</h2>
+
+        <!-- ERROR 1 -->
+        <h3>Error 1: Login System Not Working</h3>
+        <p><strong>Date Encountered:</strong> 24 May 2026</p>
+        <p><strong>Issue:</strong> After adding task management code, the login button stopped responding.</p>
+
+        <p><strong>Screenshot of Error:</strong> (Insert screenshot here)</p>
+
+        <p><strong>Problematic Code Snippet:</strong></p>
+        <pre><code>
+// DOM elements were accessed before the page finished loading
+const addTaskBtn = document.getElementById("addTaskBtn");
+        </code></pre>
+
+        <p><strong>Cause:</strong>  
+        JavaScript attempted to access elements before they existed, causing the script to stop executing silently.  
+        This prevented the login button event listener from being registered.</p>
+
+        <p><strong>Date Resolved:</strong> 24 May 2026</p>
+        <p><strong>Screenshot of Fix:</strong> (Insert screenshot here)</p>
+
+        <p><strong>Corrected Code Snippet:</strong></p>
+        <pre><code>
+window.onload = function() {
+    // All code wrapped to ensure DOM is loaded
+};
+        </code></pre>
+
+        <p><strong>Reflection:</strong>  
+        This error taught me the importance of ensuring the DOM is fully loaded before accessing elements.  
+        Wrapping the script in <code>window.onload</code> prevented silent failures and ensured all event listeners were registered correctly.</p>
+
+        <hr>
+
+        <!-- ERROR 2 -->
+        <h3>Error 2: Edit and Delete Buttons Not Working</h3>
+        <p><strong>Date Encountered:</strong> 24 May 2026</p>
+        <p><strong>Issue:</strong> Edit and Delete buttons appeared but did nothing when clicked.</p>
+
+        <p><strong>Screenshot of Error:</strong> (Insert screenshot here)</p>
+
+        <p><strong>Problematic Code Snippet:</strong></p>
+        <pre><code>
+// Functions were not exposed to global scope
+function editTask(index) { ... }
+        </code></pre>
+
+        <p><strong>Cause:</strong>  
+        The functions were defined inside <code>window.onload</code> but not attached to <code>window</code>.  
+        Because the HTML uses <code>onclick="editTask(0)"</code>, the browser could not find the function.</p>
+
+        <p><strong>Date Resolved:</strong> 24 May 2026</p>
+        <p><strong>Screenshot of Fix:</strong> (Insert screenshot here)</p>
+
+        <p><strong>Corrected Code Snippet:</strong></p>
+        <pre><code>
+window.editTask = function(index) { ... }
+window.deleteTask = function(index) { ... }
+        </code></pre>
+
+        <p><strong>Reflection:</strong>  
+        This error highlighted the importance of understanding JavaScript scope.  
+        Exposing functions to <code>window</code> ensures they can be called from HTML event attributes.  
+        It also reinforced the importance of defining global functions before rendering dynamic HTML.</p>
+
+    </section>
+
+</body>
+</html>
