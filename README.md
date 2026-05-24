@@ -2,7 +2,7 @@
 ### University of South Australia – INFOTECH Assignment 3  
 ### Author: Koby Mason
 ---
-## 📌 Overview  
+## Overview  
 The Study Task Manager is a multi‑page web application designed to help students organise and track their study tasks.  
 This project demonstrates core web development skills including:
 
@@ -17,7 +17,7 @@ This project demonstrates core web development skills including:
 
 ---
 
-## 🗂️ Project Structure  
+## Project Structure  
 Assignment_3_WebPage/
 │
 ├── html/
@@ -30,37 +30,44 @@ Assignment_3_WebPage/
 │   └── styles.css
 │
 ├── js/
+│   ├── main.js
 │   └── tasks.js
+│
+├── images/
+│   ├── study1.png
+│   ├── study2.png
+│   ├── study3.png
+│   ├── error1.png
+│   └── error2.png
 │
 └── README.md
 
-
 ---
 
-## ✨ Features  
+## Features  
 
-### 🔐 Login System  
+### Login System  
 A basic login system restricts access to the Study Task Manager page.  
 Credentials (for demonstration only):  
 - **Username:** student  
 - **Password:** password123  
 
-### 📝 Task Management (CRUD)  
+### Task Management (CRUD)  
 Users can:  
 - Create new study tasks  
 - Edit existing tasks  
 - Delete tasks (with confirmation)  
 - View tasks in a dynamic table  
 
-### ✔ Validation  
+### Validation  
 The system checks for:  
 - Empty required fields  
 - Invalid dates (past dates are rejected)  
 
-### 🕒 Live Date & Time  
+### Live Date & Time  
 Displayed at the bottom of the tasks page and updates every second.
 
-### 🎨 Dark Theme + Animations  
+### Dark Theme + Animations  
 The entire site uses a modern dark theme with:  
 - Neutral blue accent  
 - Smooth fade‑ins  
@@ -71,7 +78,7 @@ The entire site uses a modern dark theme with:
 
 ---
 
-## 🧪 Testing Summary  
+## Testing Summary  
 All features were tested across multiple iterations:
 
 - Login system  
@@ -87,7 +94,7 @@ Two real errors were encountered and documented in the **Project Blog** page.
 
 ---
 
-## 📘 Agile Development  
+## Agile Development  
 The project was developed using a 3‑week Agile sprint plan.  
 The full plan is documented in `blog.html`.
 
