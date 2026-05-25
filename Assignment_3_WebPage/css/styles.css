@@ -101,12 +101,12 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(76, 201, 240, 0.18);
   object-fit: cover;
-  transition: opacity 0.35s ease, transform 0.35s ease;
+  transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
 .study-img:hover {
   opacity: 0.97;
-  transform: scale(1.015);
+  transform: scale(1.05);
 }
 
 /* Arrows */
@@ -170,6 +170,12 @@ input, textarea {
     color: var(--text-light);
     margin-bottom: 12px;
     transition: all 0.25s ease;
+}
+
+/*Due Date Recolour*/ 
+input[type="date"] {
+    background-color: #ffb3d9;
+    color: #000;
 }
 
 input:focus, textarea:focus {

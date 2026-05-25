@@ -91,12 +91,12 @@ window.onload = function() {
         updateTaskBtn.style.display = "inline-block";
     };
 
+ /* Delete Return; and rearrange code so that it works */
     window.deleteTask = function(index) {
-        const confirmDelete = confirm("Are you sure you want to delete this task?");
-        if (!confirmDelete) return;
-
+        if (confirm("Are you sure you want to delete this task?")) {
         tasks.splice(index, 1);
         renderTasks();
+        }
     };
 
     // ---------------------------
